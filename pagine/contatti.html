@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<!-- Meta e CSS -->
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="Prototipo di incubatore di impresa 'InCube', come esempio di sito per l'esercitazione del corso di Web Design">
+    <meta name="author" content="EthanMascottes">
+    <!-- CSS -->
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="../css/incube.css">
+        <link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" href="../css/bootstrap-social.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <!-- SCRIPT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Titolo -->
+    <title>Prototipo di sito incubatore d'impresa</title>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-default ">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <!-- Nome del sito  -->
+                    <a class="navbar-brand" href="../home.html">
+                        InCube Inc.                    
+                    </a>
+                    
+                    <div class="navbar-header page-scroll">
+                        <form class="navbar-form" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cerchi qualcosa?">
+                            </div>
+                            <a class="navbar-default" href="RisultatiRicerca.html">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </a>
+                        </form>
+                    </div>
+                </div>
+                <!-- Login -->
+                <div class="collapse navbar-collapse" id=".navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <!-- Modulo Login -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            <h4 class="modal-title" id="myModalLabel">Accedi</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form role="form">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" id="uLogin" placeholder="Login">
+                                                        <label for="uLogin"
+                                                               class="input-group-addon glyphicon glyphicon-user"></label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <input type="password" class="form-control" id="uPassword"
+                                                               placeholder="Password">
+                                                        <label for="uPassword"
+                                                               class="input-group-addon glyphicon glyphicon-lock"></label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox"> Ricordami
+                                                    </label>
+                                                </div>
+                                            </form>
+                                            <a data-toggle="modal" data-target="#registrazione">Non sei
+                                                ancora Registrato?</a>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="form-control btn btn-primary">Accedi</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>                       
+                        <li>
+                            <form class="navbar-form navbar-right" role="login">
+                                <button type="submit" class="btn btn-default">
+                                    <a href="#" data-toggle="modal" data-target="#myModal"> 
+                                        Member Login <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                    </a>
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        <br><br>
+        <div class="container">
+            <div class="navbar-header hidden-print">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- MENU DI NAVIGAZIONE-->
+            <div class="navbar-collapse collapse ">
+                <ul class="nav navbar-nav">
+                    
+                    <!-- Chi Siamo -->
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Chi Siamo<span
+                            class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">CUBE</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Collaborazioni</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Incubazione -->
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Incubazione<span
+                            class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Obiettivi</a></li>
+                            <li><a href="#">Aziende nel Cube</a></li>
+                            <li><a href="#">CUBE Mentors</a></li>
+                            <li><a href="#">Tariffe</a></li>
+                            <li><a href="#">Proponi la tua Startup</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Area Riservata -->
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Area Riservata<span
+                            class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Account personale</a></li>
+                            <li><a href="#">La mia Startup</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Servizi -->
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Servizi<span
+                            class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Startup</a></li>
+                            <li><a href="#">Imprese</a></li>
+                            <li><a href="#">Formazione</a></li>
+                            <li><a href="#">Strumenti Finanziari</a></li>
+                            <li><a href="#">Spazi Lavorativi</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Eventi -->
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Eventi<span
+                            class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Calendario</a></li>
+                            <li><a href="#">Conferenze</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- News -->
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">News<span
+                            class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="articoli.html">Articoli</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Contatti -->
+                    <li><a href="contatti.html" >Contatti</a></li>
+                    
+                    <!-- Blog -->
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog<span
+                            class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Storie di successo</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Path -->
+<div class="row">
+    <div class="col-lg-12">
+        <ol class="breadcrumb">
+            <li><a href="../home.html">Home</a></li>
+            <li class="active">Contatti</li>
+        </ol>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 center">
+                        <h2>Contattaci! </h2>
+                            <br> <br>
+                </div>
+                <div class="col-xs-12">
+                    <fieldset>
+                        <!-- nome -->
+                        <div class="form-group">
+                            <label class="col-xs-3 control-label center" for="name">Nome:</label>
+                            <div class="col-xs-9">
+                                <input id="nameclient" name="name" type="text" placeholder="Inserisci il tuo nome" class="form-control">
+								<br>
+                            </div>
+                        </div>
+                        <!-- email -->
+                        <div class="form-group">
+                            <label class="col-xs-3 control-label center" for="name">E-mail:</label>
+                            <div class="col-xs-9">
+                                <input id="mailaddress" name="email" type="text" placeholder="Inserisci la tua e-mail" class="form-control">
+								<br>
+                            </div>
+                        </div>
+                       <!-- messaggio -->
+                       <div class="form-group">
+                           <label class="col-xs-3 control-label center" for="message">Messaggio:</label>
+                           <div class="col-xs-9">
+                               <textarea class="form-control" id="fieldmessage" name="message" placeholder="Inserisci del testo. " rows="5"></textarea>
+							   <br>
+                           </div>
+                       </div>
+                       <!-- pulsante -->
+                       <div class="form-group">
+                           <div class="col-xs-8 col-xs-offset-3">
+                               <button type="submit" class="btn btn-primary btn-lg" id="buttonsubmit">Invia</button>
+                           </div>
+                       </div>
+                    </fieldset>
+                </div>
+           </div>
+        </div>
+
+        
+        <br><br><br>
+ 
+    <!-- footer, social, link utili, etc -->
+    <footer>
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6">
+                    <a class="btn btn-block btn-social btn-facebook">
+                        <span class="fa fa-facebook"></span> Seguici su Facebook
+                    </a>
+                    <br><br>
+                    <a class="btn btn-block btn-social btn-twitter">
+                        <span class="fa fa-twitter"></span> Seguici su Twitter
+                    </a>
+                    <br><br>
+                    <a class="btn btn-block btn-social btn-instagram">
+                        <span class="fa fa-Instagram"></span> Seguici su Instagram
+                    </a>
+              </div>
+              
+              
+              <div class="col-sm-6" align="center">
+                    <!-- Mappa del sito-->
+                  <br><br>
+                  <i class="fa fa-sitemap"></i>
+                  <a class="links" href="gerarchia.html">Mappa del sito</a>
+                  <br>
+                  <i class="fa fa-users"></i>
+                  <a class="links" href="#page-top">Credits</a>
+                  <br>
+                  <i class="fa fa-user-secret"></i>
+                  <a class="links" href="#page-top">Privacy</a>
+              </div>
+          </div>
+      </div>
+    </footer>
+    <br>
+</body>

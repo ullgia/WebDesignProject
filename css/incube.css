@@ -1,0 +1,238 @@
+body {
+    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color:floralwhite;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.75;
+}
+ 
+a {
+    color: #21b93e;
+    font-size: 16px;
+}
+
+h1,h2,h3,
+h4,h5 {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+.center{
+
+	text-align:center;
+
+}
+
+
+.navbar-default {
+    border-color: transparent; /* bordo trasparente... */
+    background-color: floralwhite;
+}
+ 
+.navbar-default .navbar-brand {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    color: #21b93e;
+}
+
+.navbar-default .nav li a {
+    text-transform: uppercase; 
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-weight: 400; 
+    letter-spacing: 0.3px; 
+    color: #21b93e; 
+    font-size: 14px;
+}
+
+.navbar-default .navbar-collapse {
+    border-color: rgba(255,255,255,.02); /* colore quasi trasparente */
+    overflow:hidden;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #21b93e;
+    background-color: #21b93e;
+}
+ 
+.navbar-default .navbar-toggle .icon-bar { /* icone */
+    background-color: #fff;
+} 
+ 
+.navbar-default .navbar-nav>.active>a { /* link attivo */
+    border-radius: 0;
+    color: #fff;
+    background-color: #fed136;
+}
+
+.navbar-default .nav li a:hover,
+.navbar-default .nav li a:focus { /* elementi a destra */
+    color: #0e5800;
+}
+ 
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:active,
+.navbar-default .navbar-brand.active { /* elementi a sinistra */
+    color: #0e5800;
+}
+ 
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #6cf766;
+}
+ 
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: #fff;
+    background-color: #6cf766;
+}
+
+@media(min-width:768px) {
+    .navbar-default {
+        padding: 25px 0;
+        border: 0;
+        background-color: transparent;
+        -webkit-transition: background .3s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .3s ease-in-out,padding .5s ease-in-out;
+        transition: background .3s ease-in-out,padding .5s ease-in-out;
+    }
+ 
+    .navbar-default .navbar-brand {
+        font-size: 18px;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+ 
+    .navbar-default .navbar-nav.active {
+        border-radius: 3px;
+    }
+ 
+    .navbar-default.navbar-shrink {
+        padding: 10px 0;
+        background-color: #222;
+    }
+ 
+    .navbar-default.navbar-shrink .navbar-brand {
+        font-size: 1.5em;
+    }
+}
+
+
+.gerarchia-livello-2{
+    padding-left: 50px;
+}
+
+.gerarchia-livello-3{
+    padding-left: 100px;
+}
+
+
+@media (max-width: 1920px) {
+    
+    .featurette {
+        text-align: center;
+    }
+}
+ 
+@media (max-width: 1280px) {
+    
+    .featurette {
+        text-align: center;
+    }
+    
+}
+ 
+@media (max-width: 1024px) {
+
+    
+    .featurette {
+        text-align: center;
+    }
+}
+
+@media (max-width: 800px) {
+ 
+
+    .featurette {
+        text-align: center;
+    }
+}
+ 
+@media (max-width: 700px) {
+
+    .featurette {
+        text-align: center;
+    }
+}
+ 
+@media (max-width: 500px) {
+    
+    .featurette {
+        text-align: center;
+    }
+}
+
+@media (max-width: 310px) {
+    
+    .featurette {
+        text-align: center;
+    }
+}
+
+section {
+    padding: 110px 0;
+}
+
+section h2.section-heading {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+ 
+section h3.section-subheading {
+    margin-bottom: 75px;
+    text-transform: none;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.image-bg-fixed-height {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background: url(../img/full.png) no-repeat center center scroll;
+    padding: 100px 0;
+}
+
+footer a.links {
+    text-transform: none;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+::-moz-selection {
+    text-shadow: none;
+    background: #6cf766;
+}
+ 
+::selection {
+    text-shadow: none;
+    background: #6cf766;
+}
+ 
+img::selection {
+    background: 0 0;
+}
+ 
+img::-moz-selection {
+    background: 0 0;
+}
+
+}

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<!-- Meta e CSS -->
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="Prototipo di incubatore di impresa 'InCube', come esempio di sito per l'esercitazione del corso di Web Design">
+    <meta name="author" content="EthanMascottes">
+    <!-- CSS -->
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="../css/incube.css">
+        <link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" href="../css/bootstrap-social.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <!-- SCRIPT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Titolo -->
+    <title>Gerarchia</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default ">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <!-- Nome del sito  -->
+                    <a class="navbar-brand" href="../home.html">
+                        InCube Inc.                    
+                    </a>
+                    
+                    <div class="navbar-header page-scroll">
+                        <form class="navbar-form" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Cerchi qualcosa?">
+                            </div>
+                            <a class="navbar-default" href="risultatiRicerca.html">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </a>
+                        </form>
+                    </div>
+                </div>
+                <!-- Login -->
+                <div class="collapse navbar-collapse" id=".navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <!-- Modulo Login -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            <h4 class="modal-title" id="myModalLabel">Accedi</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form role="form">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" id="uLogin" placeholder="Login">
+                                                        <label for="uLogin"
+                                                               class="input-group-addon glyphicon glyphicon-user"></label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <input type="password" class="form-control" id="uPassword"
+                                                               placeholder="Password">
+                                                        <label for="uPassword"
+                                                               class="input-group-addon glyphicon glyphicon-lock"></label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox"> Ricordami
+                                                    </label>
+                                                </div>
+                                            </form>
+                                            <a data-toggle="modal" data-target="#registrazione">Non sei
+                                                ancora Registrato?</a>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="form-control btn btn-primary">Accedi</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>                       
+                        <li>
+                            <form class="navbar-form navbar-right" role="login">
+                                <button type="submit" class="btn btn-default">
+                                    <a href="#" data-toggle="modal" data-target="#myModal"> 
+                                        Member Login <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                    </a>
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        <br><br>
+        <div class="container">
+            <div class="navbar-header hidden-print">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- MENU DI NAVIGAZIONE-->
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    
+                    <!-- Chi Siamo -->
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Chi Siamo<span
+                            class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">CUBE</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Collaborazioni</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Incubazione -->
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Incubazione<span
+                            class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Obiettivi</a></li>
+                            <li><a href="#">Aziende nel Cube</a></li>
+                            <li><a href="#">CUBE Mentors</a></li>
+                            <li><a href="#">Tariffe</a></li>
+                            <li><a href="#">Proponi la tua Startup</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Area Riservata -->
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Area Riservata<span
+                            class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Account personale</a></li>
+                            <li><a href="#">La mia Startup</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Servizi -->
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Servizi<span
+                            class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Startup</a></li>
+                            <li><a href="#">Imprese</a></li>
+                            <li><a href="#">Formazione</a></li>
+                            <li><a href="#">Strumenti Finanziari</a></li>
+                            <li><a href="#">Spazi Lavorativi</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Eventi -->
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Eventi<span
+                            class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Calendario</a></li>
+                            <li><a href="#">Conferenze</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- News -->
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">News<span
+                            class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="articoli.html">Articoli</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Contatti -->
+                    <li><a href="contatti.html" >Contatti</a></li>
+
+                    <!-- Blog -->
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog<span
+                            class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Storie di successo</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Path -->
+    <div class="row">
+        <div class="col-lg-12">
+            <ol class="breadcrumb">
+                <li><a href="../home.html">Home</a></li>
+                <li class="active">Gerarchia Del Sito</li>
+            </ol>
+        </div>
+    </div>
+
+
+    <!-- Gerarchia Del Sito Web INQUBE -->
+    <div class="container">
+        <div class="row">
+
+            <a class="gerarchia-livello-1" href="../home.html">Homepage</a><br><br>
+
+            <a class="gerarchia-livello-2" href="#">Chi Siamo</a><br>
+            <a class="gerarchia-livello-3" href="#">CUBE</a><br>
+            <a class="gerarchia-livello-3" href="#">Mission</a><br>
+            <a class="gerarchia-livello-3" href="#">Team</a><br>
+            <a class="gerarchia-livello-3" href="#">Collaborazioni</a><br>
+            <a class="gerarchia-livello-3" href="#">FAQ</a><br><br>
+
+            <a class="gerarchia-livello-2" href="#">Incubazione</a><br>
+            <a class="gerarchia-livello-3" href="#">Obiettivi</a><br>
+            <a class="gerarchia-livello-3" href="#">Aziende nel CUBE</a><br>
+            <a class="gerarchia-livello-3" href="#">Cube Mentors</a><br>
+            <a class="gerarchia-livello-3" href="#">Tariffe</a><br>
+            <a class="gerarchia-livello-3" href="#">Proponi La Tua Startup</a><br><br>
+
+            <a class="gerarchia-livello-2" href="#">Area Riservata</a><br>
+            <a class="gerarchia-livello-3" href="#">Account Personale</a><br>
+            <a class="gerarchia-livello-3" href="#">La Mia Startup</a><br><br>
+            
+            <a class="gerarchia-livello-2" href="servizi.html">Servizi</a><br>
+            <a class="gerarchia-livello-3" href="#">Startup</a><br>
+            <a class="gerarchia-livello-3" href="#">Imprese</a><br>
+            <a class="gerarchia-livello-3" href="#">Formazione</a><br>
+            <a class="gerarchia-livello-3" href="#">Strumenti Finanziari</a><br>
+            <a class="gerarchia-livello-3" href="#">Spazi Lavorativi</a><br><br>
+
+            <a class="gerarchia-livello-2" href="#">Eventi</a><br>
+            <a class="gerarchia-livello-3" href="eventi/calendario.html">Calendario</a><br>
+            <a class="gerarchia-livello-3" href="eventi/conferenze.html">Conferenze</a><br><br>
+
+            <a class="gerarchia-livello-2" href="#">News</a><br>
+            <a class="gerarchia-livello-3" href="#">Articoli</a><br>
+            <a class="gerarchia-livello-3" href="#">Newsletter</a><br><br>
+
+            <a class="gerarchia-livello-2" href="#">Blog</a><br>
+            <a class="gerarchia-livello-3" href="#">Storie Di Successo</a><br><br>
+
+
+            <a class="gerarchia-livello-2" href="contatti.html">Contatti</a><br>
+            <a class="gerarchia-livello-2" href="gerarchia.html">Gerarchia Del Sito</a><br><br>
+        </div>
+    </div>
+    
+    <br>
+    <hr class="featurette-divider">
+    
+    <!-- footer, social, link utili, etc -->
+    <footer>
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-4">
+                    <a class="btn btn-block btn-social btn-facebook">
+                        <span class="fa fa-facebook"></span> Seguici su Facebook
+                    </a>
+                    <br><br>
+                    <a class="btn btn-block btn-social btn-twitter">
+                        <span class="fa fa-twitter"></span> Seguici su Twitter
+                    </a>
+                    <br><br>
+                    <a class="btn btn-block btn-social btn-instagram">
+                        <span class="fa fa-Instagram"></span> Seguici su Instagram
+                    </a>
+                    <br><br><br>
+                    <p class="pull-right"><a href="#">Top</a></p>
+                    <p>© 2017, Ethan Mascottes</p>
+              </div>
+              
+              
+              <div class="col-sm-3" align="center">
+                    <!-- Mappa del sito-->
+                  <br><br>
+                  <i class="fa fa-sitemap"></i>
+                  <a class="links" href="gerarchia.html">Mappa del sito</a>
+                  <br>
+                  <i class="fa fa-users"></i>
+                  <a class="links" href="#page-top">Credits</a>
+                  <br>
+                  <i class="fa fa-user-secret"></i>
+                  <a class="links" href="#page-top">Privacy</a>
+              </div>
+              
+              
+              <div class="col-sm-5">
+                    <fieldset>
+                        <!-- nome -->
+                        <div class="form-group">
+                            <label class="col-xs-9 control-label" for="name">Nome</label>
+                            <div class="col-xs-12">
+                                <input id="nameclient" name="name" type="text" placeholder="Nome" class="form-control">
+                            </div>
+                        </div>
+                        <!-- email -->
+                        <div class="form-group">
+                            <label class="col-xs-9 control-label" for="name">email</label>
+                            <div class="col-xs-12">
+                                <input id="mailaddress" name="email" type="text" placeholder="La tua email" class="form-control">
+                            </div>
+                        </div>
+                       <!-- messaggio -->
+                       <div class="form-group">
+                           <label class="col-xs-9 control-label" for="message">messaggio</label>
+                           <div class="col-xs-12">
+                               <textarea class="form-control" id="fieldmessage" name="message" placeholder="Scrivi il tuo messaggio " rows="5"></textarea>
+                           </div>
+                       </div>
+                       <!-- pulsante -->
+                       <div class="form-group">
+                           <div class="col-xs-2 col-xs-offset-0">
+                               <button type="submit" class="btn btn-default" id="buttonsubmit">Invia</button>
+                           </div>
+                       </div>
+                    </fieldset>
+              </div>
+          </div>
+      </div>
+    </footer>
+    <br>
+
+</body>	
